@@ -5,11 +5,12 @@
 	<title>Roll Dice</title>
 </head>
 <body>
-<p><h1>The dice roll was <?= $roll ?>.</h1></p>
-<p><h1>You guessed <?= $number ?>.</h1></p>
-<?php if ($roll == $number): ?>
+<p><h2>The dice roll was <?= $roll ?>.</h2></p>
+<p><h2>You guessed <?= $number ?>.</h2></p>
+
+<? if ($roll == $number): ?>
 	<p><h1>You guessed the number!</h1></p>
-<?php endif; ?>
+<? endif; ?>
 	
 </body>
 </html>

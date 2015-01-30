@@ -33,11 +33,11 @@ Route::get('say-hello/{name}/{age}', function($name, $age) {
 });
 
 Route::get('resume', function() {
-	return Redirect::to('http://codeup.dev');
+	return View::make('resume');
 });
 
 Route::get('portfolio', function() {
-	return Redirect::to('http://planner.dev');
+	return View::make('portfolio');
 });
 
 Route::get('rolldice/{number}', function($number){
