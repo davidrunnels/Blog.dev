@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Laravel Blog</title>
+	<title>David Runnels @yield('title') </title>
 </head>
 <body>
 	<div id="content" class="col-md-3">

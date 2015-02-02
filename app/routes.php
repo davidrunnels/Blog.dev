@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/', function() {
+	return View::make('index');
+});
+
 Route::get('parks', function() {
 	return View::make('parks');
 });
@@ -32,16 +36,22 @@ Route::get('say-hello/{name}/{age}', function($name, $age) {
 	return "Hello $name! I hear you're $age years old.";
 });
 
-Route::get('resume', function() {
-	return View::make('resume');
-});
+Route::get('resume', 'HomeController@showResume');
 
-Route::get('portfolio', function() {
-	return View::make('portfolio');
-});
+Route::get('portfolio', 'HomeController@showPortfolio');
+
+Route::get('whackamole', 'HomeController@showWhackamole');
 
 Route::get('rolldice/{number}', function($number){
 	$roll = rand(1,12);
 	return View::make('rolldice')->with('number', $number)->with('roll', $roll);
 });
+
+Route::resource('posts', 'PostsController');
+
+Route::get('orm-test', function ()
+{
+    
+});
+
 
