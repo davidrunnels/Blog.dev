@@ -4,42 +4,18 @@
 	- Resume
 @stop
 
-@section('content')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Resume - David Runnels</title>
-
+@section('top-scripts')
   <!-- Bootstrap -->
   <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <![endif]-->
-
-      <!-- Font Awesome -->
-
-      <link rel="stylesheet" href="/font-awesome-4.2.0/css/font-awesome.min.css">
-
-      <!-- Padding -->
-     <!-- <style type="text/css">
-      body { 
-        padding-top: 70px; 
-      }
-    </style> -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/font-awesome-4.2.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="/css/css_resume.css">
 
-  </head>
-  <body>
+@stop
 
-    <!-- Navbar -->
+@section('top-navbar')
 
     <div class="navbar navbar-default">
       <div class="navbar-header">
@@ -63,11 +39,11 @@
     </div>
   </div>
 
-  <!-- Collect the nav links, forms, and other content for toggling -->
+@stop
 
+@section('content')
 
-
-  <!-- Navbar end -->
+  <body>
 
   <!-- begin container -->
 <div class="container">
@@ -167,10 +143,10 @@
     </div>
   </div>
 </div> <!-- end of container -->
+@stop
 
 
- <!-- Footer Navbar -->
-
+@section('bottom-navbar')
  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -184,15 +160,16 @@
       <a class="navbar-brand"</a>
       </div>
 
+@stop
 
+@section('bottom-scripts')
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <!-- Include all compiled plugins (below), or include individual files as needed -->
       <script src="/bootstrap/js/bootstrap.min.js"></script>
-
+@stop
 
 
     </body>
     </html>
 
-@stop
