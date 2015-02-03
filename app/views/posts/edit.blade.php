@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-- Create
+- Edit
 @stop
 
 @section('top-scripts')
@@ -16,19 +16,20 @@
 @stop
 
 @section('content')
-<div class="page-header"><h1>Create A Post</h1></div>
 
-{{Form::open(array('action' =>'PostsController@store')) }}
+<div class="page-header"><h1>Edit Post</h1></div>
+
+{{ Form::model($post, array('action' => array('PostsController@update', $post->id),'method' => 'put')) }}
 	@include('posts.form')
 
-
-	{{Form::submit('Save Changes', array('class' => 'btn btn-primary')) }}
+	{{ Form::submit('Save Changes', array('class' => 'btn btn-primary')) }}
 {{ Form::close() }}
-@stop
 
-		@section('bottom-scripts')
+@section('bottom-scripts')
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="/bootstrap/js/bootstrap.min.js"></script>
 		@stop
+
+@stop

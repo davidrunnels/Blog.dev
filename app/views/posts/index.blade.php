@@ -18,13 +18,23 @@
 @section('content')
 
 	@foreach ($posts as $post)
-		<h1>{{{ $post->title }}}</h1>
-		<p>{{{ $post->body }}}</p>
+
+		<div>
+			<h1>{{{ $post->title }}}</h1>
+			<p>{{{ $post->body }}}</p>
+			<p>Post Created: {{{ $post->created_at->diffForHumans() }}}<br>
+			Post Updated: {{{ $post->updated_at->diffForHumans() }}}</p>
+
+			<a href="{{{ action('PostsController@show', $post->id) }}}">Display this Post&nbsp</a>
+			<a href="{{{ action('PostsController@edit', $post->id) }}}">&nbspEdit this Post&nbsp</a>
+			<a href="">Delete this Post&nbsp(disabled)</a>
+		</div>
 	@endforeach
 
-	{{ $posts->links() }} 
-
+	<p>{{ $posts->links() }} </p>
+	
 @stop
+
 
 @stop
 

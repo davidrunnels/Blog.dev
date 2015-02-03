@@ -39,3 +39,9 @@ section {
     background-color: transparent;
     border-radius: 0;
 }
+
+.menu { 
+    text-align:center;
+    padding: 0px;
+    display:inline;
+}

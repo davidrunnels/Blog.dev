@@ -19,6 +19,10 @@ Route::get('parks', function() {
 	return View::make('parks');
 });
 
+Route::get('contact', function() {
+	return View::make('contact');
+});
+
 Route::get('parks', function() {
 	return 'Here are some national parks.';
 });

@@ -35,4 +35,9 @@ class HomeController extends BaseController {
 		return View::make('whackamole');
 	}
 
+	public function showContact()
+	{
+		return View::make('contact');
+	}
+
 }

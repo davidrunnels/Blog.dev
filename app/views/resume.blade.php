@@ -17,27 +17,7 @@
 
 @section('top-navbar')
 
-    <div class="navbar navbar-default">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">David Runnels</a>
-      </div>
-      <div class="navbar-collapse collapse navbar-responsive-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="http://codeup.dev/who_am_i.html">Who Am I?</a></li>
-          <li><a href="{{ action('HomeController@showPortfolio') }}">Portfolio</a></li>
-          <li><a href="http://codeup.dev/contact.html">Contact</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="http://codeup.com" target="blank">CodeUp</a></li>
-        </li>
-      </ul>
-    </div>
-  </div>
+   
 
 @stop
 
@@ -143,40 +123,6 @@
     </div>
   </div>
 </div> <!-- end of container -->
-@stop
-
-
-@section('bottom-navbar')
- <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand"</a>
-      </div>
-      <a class="navbar-brand"</a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    <!-- Footer Navbar -->
-          <ul class="nav navbar-nav navbar-right">   
-            <li><a href="mailto:david.runnels@gmail.com?Subject=Web%20inquiry">   
-              <i class="fa fa-envelope-square fa-3x"></i></a></li>   
-              <li><a href="http://linkedin.com/in/davidrunnels" target="_blank">   
-               <i class="fa fa-linkedin-square fa-3x"></i>    
-               <li><a href="https://github.com/davidrunnels" target="_blank">   
-                 <i class="fa fa-github-square fa-3x"></i></a></li>   
-                 <li><a href="https://twitter.com/drun" target="_blank">    
-                   <i class="fa fa-twitter-square fa-3x">  </i></a></li>    
-                   <li><a href="http://instagram.com/drun" target="_blank">   
-                    <i class="fa fa-instagram fa-3x"></i></a></li>   
-                  </ul>    
-                </div>
-
-
 @stop
 
 @section('bottom-scripts')
