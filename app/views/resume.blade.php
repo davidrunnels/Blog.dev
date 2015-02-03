@@ -159,6 +159,23 @@
       </button>
       <a class="navbar-brand"</a>
       </div>
+      <a class="navbar-brand"</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    <!-- Footer Navbar -->
+          <ul class="nav navbar-nav navbar-right">   
+            <li><a href="mailto:david.runnels@gmail.com?Subject=Web%20inquiry">   
+              <i class="fa fa-envelope-square fa-3x"></i></a></li>   
+              <li><a href="http://linkedin.com/in/davidrunnels" target="_blank">   
+               <i class="fa fa-linkedin-square fa-3x"></i>    
+               <li><a href="https://github.com/davidrunnels" target="_blank">   
+                 <i class="fa fa-github-square fa-3x"></i></a></li>   
+                 <li><a href="https://twitter.com/drun" target="_blank">    
+                   <i class="fa fa-twitter-square fa-3x">  </i></a></li>    
+                   <li><a href="http://instagram.com/drun" target="_blank">   
+                    <i class="fa fa-instagram fa-3x"></i></a></li>   
+                  </ul>    
+                </div>
+
 
 @stop
 
