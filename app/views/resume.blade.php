@@ -13,7 +13,7 @@
 <div class="container">
   <div class="row clearfix">
     <div class="col-md-4 column">
-      <img alt="140x140" src="/img/server.png" class="img-rounded" />
+      <img alt="140x140" src="/img/server.jpg" class="img-rounded" />
         <h3>
         Server-side Technologies
       </h3>
