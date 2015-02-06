@@ -23,7 +23,7 @@
 				</p>
 			</div>
 
-			<h5>Posted By: {{{ $post->user->email }}}</h5>
+			<h5>Posted By: {{{ $post->user->first_name }}}</h5>
 
 			<img class="ls-bg" src="{{{ $post->img_url }}}" alt="">
 
