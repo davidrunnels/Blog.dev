@@ -12,8 +12,9 @@
 	<div class='posts' id='posts'>
 		<h2>
 			<strong>
-				{{{ $post->title }}}</strong>
-			</h2>
+				{{{ $post->title }}}
+			</strong>
+		</h2>
 
 			<div class='create-update'>
 				<p>
@@ -23,6 +24,8 @@
 			</div>
 
 			<h5>Posted By: {{{ $post->user->email }}}</h5>
+
+			<img class="ls-bg" src="{{{ $post->img_url }}}" alt="">
 
 			<p><h3>{{{ $post->body }}}</h3></p>
 
