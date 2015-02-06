@@ -16,17 +16,32 @@
 @stop
 
 @section('content')
+<div>
+	<div class='main-container'>
+		<div class='posts' id='posts'>
+			<h2>{{{ $post->title }}}</h2>
+			<div class='create-update'>
+				post updated [{{{ $post->updated_at->diffForHumans() }}}]&nbsp
+				created [{{{ $post->created_at->diffForHumans() }}}]</p>
+			</div>
+				<h5>posted by: {{{ $post->user->email }}}</h5>
+			<p><h3>{{{ $post->body }}}</h3></p>
+			@if (Auth::check())
+		
+			<a href="{{{ action('PostsController@edit', $post->id) }}}"><button class='btn btn-info' id='edit-button'>Edit Post</button></a>
 
-	<h1>{{{ $post->title }}}</h1>
-	<p>{{{ $post->body }}}</p>
+			{{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'method' => 'delete')) }}
+				{{ Form::submit('Delete Post', array('class' => 'btn btn-danger', 'id' => 'delete-button')) }}
+			{{ Form::close() }}
+
+			</div>
+</div>
+	@endif
+
+	@if (Auth::guest())
+		<h2>Welcome Guest!</h2>
+	@endif
+</div>
 	
 @stop
 
-@stop
-
-		@section('bottom-scripts')
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="/bootstrap/js/bootstrap.min.js"></script>
-		@stop

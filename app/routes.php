@@ -23,6 +23,11 @@ Route::get('contact', function() {
 	return View::make('contact');
 });
 
+Route::get('index', function() {
+	return View::make('index');
+});
+
+
 Route::get('parks', function() {
 	return 'Here are some national parks.';
 });
@@ -46,6 +51,10 @@ Route::get('portfolio', 'HomeController@showPortfolio');
 
 Route::get('whackamole', 'HomeController@showWhackamole');
 
+Route::get('contact', 'HomeController@showContact');
+
+Route::get('create', 'HomeController@showCreate');
+
 Route::get('rolldice/{number}', function($number){
 	$roll = rand(1,12);
 	return View::make('rolldice')->with('number', $number)->with('roll', $roll);
@@ -53,8 +62,30 @@ Route::get('rolldice/{number}', function($number){
 
 Route::resource('posts', 'PostsController');
 
-Route::get('orm-test', function ()
+Route::get('login', 'HomeController@showLogin');
+Route::post('login', 'HomeController@doLogin');
+Route::get('logout', 'HomeController@doLogout');
+
+Route::get('search', function ()
 {
+	$search = Input::get('search');
+
+	$query = Post::with('user');
+
+	$query->where('title', 'like', '%' . $search . '%');
+	$query->orWhere('created_at', 'like', '%' . $search . '%');
+
+	$query->orWhereHas('user', function($q){
+		$search = Input::get('search');
+
+		$q->where('email', 'like', '%' . $search . '%');
+	});
+
+	$posts = $query->orderBy('created_at', 'desc')->paginate(4);
+
+	foreach ($posts as $post) {
+		echo $post->title;
+	}
     
 });
 

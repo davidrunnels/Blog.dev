@@ -9,8 +9,25 @@ class Post extends BaseModel {
     	'body' => 'required'
     	);
 
-    public function setTitlenameAttribute($value) {
-    $this->attributes['title'] = strtolower($value);
+    public function setTitleAttribute($value) {
+    $this->attributes['title'] = ($value);
+    }
+
+    public function user()
+    {
+    	return $this->belongsTo('User');
+    }
+
+    public function uploadFile($file) 
+    {
+        $uploadsPath = public_path() . '/uploads';
+        $fileName =$this->id . '-' . $file->getClientOriginalName();
+                
+        $file->move($uploadsPath, $fileName);
+
+        $this->img_url = '/uploads/' . $fileName;
+
+        $this->save();
     }
 
 }

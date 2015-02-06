@@ -29,8 +29,9 @@
 <div class="container">
   <div class="row clearfix">
     <div class="col-md-4 column">
-      <h3>
-        h3. Lorem ipsum dolor sit amet.
+      <img alt="140x140" src="/img/server.png" class="img-rounded" />
+        <h3>
+        Server-side Technologies
       </h3>
       <ul>
         <li>
@@ -60,8 +61,9 @@
       </ul>
     </div>
     <div class="col-md-4 column">
+      <img alt="140x140" src="/img/client.jpg" class="img-rounded" />
       <h3>
-        h3. Lorem ipsum dolor sit amet.
+        Client-side Technologies
       </h3>
       <ul>
         <li>
@@ -91,8 +93,9 @@
       </ul>
     </div>
     <div class="col-md-4 column">
+      <img alt="140x140" src="/img/design.jpg" class="img-rounded" />
       <h3>
-        h3. Lorem ipsum dolor sit amet.
+        Design
       </h3>
       <ul>
         <li>

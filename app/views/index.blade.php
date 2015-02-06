@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	
-</body>
-</html>
+@extends('layouts.master')
+
+@section('content')
+	<h1>Blog.dev</h1>
+@stop

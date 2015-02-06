@@ -1,46 +1,43 @@
 @extends('layouts.master')
 
 @section('title')
-	- Post Index
-@stop
-
-@section('top-scripts')
-<!-- Bootstrap -->
-<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Font Awesome -->
-<link rel="stylesheet" href="/font-awesome-4.2.0/css/font-awesome.min.css">
-
-<link rel="stylesheet" href="/css/css_resume.css">
-
+- Post Index
 @stop
 
 @section('content')
 
-	@foreach ($posts as $post)
+@forelse ($posts as $post)
 
-		<div>
-			<h1>{{{ $post->title }}}</h1>
-			<p>{{{ $post->body }}}</p>
-			<p>Post Created: {{{ $post->created_at->diffForHumans() }}}<br>
-			Post Updated: {{{ $post->updated_at->diffForHumans() }}}</p>
+<div class='main-container'>
+	<div class='posts' id='posts'>
+		<h2>
+			<strong>
+				{{{ $post->title }}}</strong>
+			</h2>
 
-			<a href="{{{ action('PostsController@show', $post->id) }}}">Display this Post&nbsp</a>
-			<a href="{{{ action('PostsController@edit', $post->id) }}}">&nbspEdit this Post&nbsp</a>
-			<a href="">Delete this Post&nbsp(disabled)</a>
-		</div>
-	@endforeach
+			<div class='create-update'>
+				<p>
+					post updated [{{{ $post->updated_at->diffForHumans() }}}]&nbsp
+					created [{{{ $post->created_at->diffForHumans() }}}]
+				</p>
+			</div>
 
-	<p>{{ $posts->links() }} </p>
-	
+			<h5>Posted By: {{{ $post->user->email }}}</h5>
+
+			<p><h3>{{{ $post->body }}}</h3></p>
+
+			<a href="{{{ action('PostsController@show', $post->id) }}}"><button class='btn btn-primary' id='display-button'>Display Post</button></a>
+			<a href="{{{ action('PostsController@edit', $post->id) }}}"><button class='btn btn-info' id='edit-button'>Edit Post</button><br></a>
+	</div>
+</div>
+
+@empty
+{{{ "Search not found on the site." }}}
+@endforelse
+
+<div class='text-center'>
+	{{ $posts->appends(array('search' => Input::get('search')))->links()}}
+</div>
+
+
 @stop
-
-
-@stop
-
-		@section('bottom-scripts')
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="/bootstrap/js/bootstrap.min.js"></script>
-		@stop

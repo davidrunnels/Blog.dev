@@ -22,7 +22,7 @@
 		<div class="top_header">
 			<h1>Connect with me.  You're only a click away.</h1>
 		</div>
-
+<div class="text-center">
 		<a href="mailto:david.runnels@gmail.com?Subject=Web%20inquiry">
 			<i class="fa fa-envelope-square fa-5x"></i>
 		</a>
@@ -42,6 +42,7 @@
 		<a href="http://instagram.com/drun" target="_blank">
 			<i class="fa fa-instagram fa-5x"></i>
 		</a>
+	</div>
 	</p>
 </div>
 

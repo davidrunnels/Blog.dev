@@ -2,11 +2,30 @@
 
 class PostsController extends \BaseController {
 
+	public function __construct() {
+
+		$this->beforeFilter('auth', array('except' => array('index', 'show')));
+	}
+
 	public function index()
 	{
-		$posts = Post::paginate(4);
-		return View::make('posts.index')->with('posts', $posts);
+		if (Input::has('search')) {
+			$search = Input::get('search');
+			$query = Post::with('user');
+
+			$query->where('title', 'like', '%' . $search . '%');
+			$query->orWhere('body', 'like', '%' . $search . '%');
+			$query->orderBy('title', 'asc');
+			$posts = $query->paginate(4);
+
+			return View::make('posts.index')->with('posts', $posts);
+		} else {
+			$posts = Post::with('user')->orderBy('created_at', 'desc')->paginate(4);
+			return View::make('posts.index')->with('posts', $posts);
+		}
 	}
+
+	
 
 	public function create()
 	{
@@ -16,15 +35,9 @@ class PostsController extends \BaseController {
 	public function store()
 	{
 
-		try {
-
-			$post = new Post();
-			
-		} catch (Exception $e) {
-
-			Log::warning("User made a bad PostController request.", array('id' => id));
-			App::abort(404);
-		}
+		$post = new Post();
+		
+		$post->user_id = Auth::id();
 		
 		return $this->savePost($post);
 
@@ -32,7 +45,7 @@ class PostsController extends \BaseController {
 
 	public function show($id)
 	{
-		$post = Post::find($id);
+		$post = Post::findOrFail($id);
 		return View::make('posts.show')->with('post', $post);
 	}
 
@@ -51,7 +64,18 @@ class PostsController extends \BaseController {
 
 	public function destroy($id)
 	{
-		return "Should delete a blog post from the database.";
+		try {
+			$post = Post::findOrFail($id);
+		}	catch (ModelNotFoundException $e) {
+			Log::warning("User made a bad PostsController request", array('id' => $id));
+			App::abort(404);
+		}
+
+		$post->delete();
+
+		Session::flash('successMessage', 'Post deleted!');
+
+		return Redirect::action('PostsController@index');
 	}
 
 	protected function savePost($post)
@@ -62,12 +86,20 @@ class PostsController extends \BaseController {
 			Session::flash('errorMessage', 'Failed to edit post.');
 			return Redirect::back()->withInput()->withErrors($validator);
     	} else {
-			$newPost = new Post();
 
-			$newPost->title = Input::get('title');
-			$newPost->body = Input::get('body');
+			$post->user_id = Auth::id();
+			$post->title = Input::get('title');
+			$post->body = Input::get('body');
 
-			$newPost->save();
+			$post->save();
+
+			if (Input::hasFile('image')) {
+				$post->uploadFile(Input::file('image'));
+
+				$post->save();			
+			}
+
+			Session::flash('successMessage', 'Post successfully saved!');
 
 			return Redirect::action('PostsController@index');
 		}
