@@ -91,7 +91,6 @@
 
         @yield('content')
 
-
 <div class='bottom-bar'>
 </div>
 
