@@ -122,3 +122,9 @@ body {
 #posts {
     margin-top: 50px;
 }
+
+#drmain {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
