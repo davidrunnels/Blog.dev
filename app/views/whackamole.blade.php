@@ -66,8 +66,8 @@
 
 		<div class="scoreboard" id="box-10" >
 			<button type="button" id="starter">Start</button>
-			<h2>Time: <span id="timer"></span><br></h2>
-			<h2>Hits: <span id="catHits"></span><br></h2>
+			<h3>Time: <span id="timer"></span><br></h3>
+			<h3>Hits: <span id="catHits"></span><br></h3>
 		</div>
 		
 		<div id="dj-kitty"></div>
@@ -102,7 +102,7 @@
 
 		// generate a number for random selection of div
 		function getRandomInt() {
-			return Math.floor(Math.random() * (9 + 0) + 0);
+			return Math.floor(Math.random() * (10 + 0) + 0);
 		}
 
 		function catWhack() {

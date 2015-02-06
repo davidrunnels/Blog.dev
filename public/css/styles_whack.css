@@ -7,104 +7,104 @@
 	#main-container {
 	}
 
-	h2 {
+	h3 {
 		font-family: Arial, Helvetica, sans-serif;
 		color: white;
 	}
 
 	#box-1 {
-		width: 121px;
-		height: 121px;
+		width: 130px;
+		height: 130px;
 		padding: 5px;
 		border: 1px solid transparent;
 		margin: 5px;
 		position: fixed;
-  			top: 84px;
-  			left: 271px;
+  			top: 133px;
+  			left: 270px;
 	}
 
 	#box-2 {
-		width: 121px;
-		height: 121px;
+		width: 130px;
+		height: 130px;
 		padding: 5px;
 		border: 1px solid transparent;
 		margin: 5px;
 		position: fixed;
-  			top: 23px;
-  			left: 480px;
+  			top: 71px;
+  			left: 478px;
 	}
 
 	#box-3 {
-		width: 121px;
-		height: 121px;
+		width: 130px;
+		height: 130px;
 		padding: 5px;
 		border: 1px solid transparent;
 		margin: 5px;
 		position: fixed;
-  			top: 23px;
-  			left: 726px;
+  			top: 73px;
+  			left: 724px;
 	}
 
 	#box-4 {
-		width: 121px;
-		height: 121px;
+		width: 130px;
+		height: 130px;
 		padding: 5px;
 		border: 1px solid transparent;
 		margin: 5px;
 		position: fixed;
-  			top: 23px;
-  			left: 1014px;
+  			top: 73px;
+  			left: 1012px;
 	}
 	#box-5 {
-		width: 121px;
-		height: 121px;
+		width: 130px;
+		height: 130px;
 		padding: 5px;
 		border: 1px solid transparent;
 		margin: 5px;
 		position: fixed;
-  			top: 322px;
-  			left: 317px;
+  			top: 372px;
+  			left: 315px;
 	}
 	#box-6 {
-		width: 121px;
-		height: 121px;
+		width: 130px;
+		height: 130px;
 		padding: 5px;
 		border: 1px solid transparent;
 		margin: 5px;
 		position: fixed;
-  			top: 230px;
-  			left: 521px;
+  			top: 280px;
+  			left: 519px;
 	}
 	#box-7 {
-		width: 121px;
-		height: 121px;
+		width: 130px;
+		height: 130px;
 		padding: 5px;
 		border: 1px solid transparent;
 		margin: 5px;
 		position: fixed;
-  			top: 248px;
-  			left: 726px;
+  			top: 296px;
+  			left: 722px;
 
 	}
 	#box-8 {
-		width: 121px;
-		height: 121px;
+		width: 130px;
+		height: 130px;
 		padding: 5px;
 		border: 1px solid transparent;
 		margin: 5px;
 		position: fixed;
-  			top: 226px;
-  			left: 946px;
+  			top: 276px;
+  			left: 944px;
 	}
 	#box-9 {
-		width: 121px;
-		height: 121px;
+		width: 130px;
+		height: 130px;
 		padding: 5px;
 		border: 1px solid transparent;
 		margin: 5px;
 		position: fixed;
-  			top: 440px;
-  			left: 552px;
+  			top: 490px;
+  			left: 550px;
 	}
 	#box-10 {
 		width: 121px;
@@ -113,7 +113,7 @@
 		border: 1px solid transparent;
 		margin: 5px;
 		position: fixed;
-  			top: 415px;
+  			top: 465px;
   			left: 1022px;
 	}
 
@@ -160,7 +160,7 @@
     	width: 120px;
     	color: white;
     	font-family: 'Arial';
-    	font-size: 32px;
+    	font-size: 24px;
 	    text-decoration: none;
 	    cursor: pointer;
 	    border:none;
