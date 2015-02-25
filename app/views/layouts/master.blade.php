@@ -23,7 +23,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">David Runnels</a>
+            <a class="navbar-brand" href="http://365daves.com">David Runnels</a>
         </div>
 
         <div class="navbar-collapse collapse navbar-responsive-collapse">
