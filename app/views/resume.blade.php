@@ -19,28 +19,16 @@
       </h3>
       <ul>
         <li>
-          Lorem ipsum dolor sit amet
+          PHP
         </li>
         <li>
-          Consectetur adipiscing elit
+          MySQL
         </li>
         <li>
-          Integer molestie lorem at massa
+          Apache
         </li>
         <li>
-          Facilisis in pretium nisl aliquet
-        </li>
-        <li>
-          Nulla volutpat aliquam velit
-        </li>
-        <li>
-          Faucibus porta lacus fringilla vel
-        </li>
-        <li>
-          Aenean sit amet erat nunc
-        </li>
-        <li>
-          Eget porttitor lorem
+          Linux
         </li>
       </ul>
     </div>
@@ -51,28 +39,16 @@
       </h3>
       <ul>
         <li>
-          Lorem ipsum dolor sit amet
+          HTML
         </li>
         <li>
-          Consectetur adipiscing elit
+          CSS
         </li>
         <li>
-          Integer molestie lorem at massa
+          JavaScript
         </li>
         <li>
-          Facilisis in pretium nisl aliquet
-        </li>
-        <li>
-          Nulla volutpat aliquam velit
-        </li>
-        <li>
-          Faucibus porta lacus fringilla vel
-        </li>
-        <li>
-          Aenean sit amet erat nunc
-        </li>
-        <li>
-          Eget porttitor lorem
+          jQuery
         </li>
       </ul>
     </div>
@@ -83,28 +59,10 @@
       </h3>
       <ul>
         <li>
-          Lorem ipsum dolor sit amet
+          Adobe Photoshop
         </li>
         <li>
-          Consectetur adipiscing elit
-        </li>
-        <li>
-          Integer molestie lorem at massa
-        </li>
-        <li>
-          Facilisis in pretium nisl aliquet
-        </li>
-        <li>
-          Nulla volutpat aliquam velit
-        </li>
-        <li>
-          Faucibus porta lacus fringilla vel
-        </li>
-        <li>
-          Aenean sit amet erat nunc
-        </li>
-        <li>
-          Eget porttitor lorem
+          Adobe Illustrator
         </li>
       </ul>
     </div>
